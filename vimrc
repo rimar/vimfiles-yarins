@@ -19,6 +19,8 @@ color molokai
 set ruler       " show the cursor position all the time
 set cursorline
 set showcmd     " display incomplete commands
+set number
+set numberwidth=4
 
 " Allow backgrounding buffers without writing them, and remember marks/undo
 " for backgrounded buffers
@@ -107,6 +109,11 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+imap <C-e> <C-o>A
+imap <C-a> <C-o>I
+
+imap <c-c> <esc>
 
 " disable cursor keys in normal mode
 map <Left>  :echo "no!"<cr>
