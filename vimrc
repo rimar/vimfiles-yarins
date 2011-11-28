@@ -1,5 +1,7 @@
 ""
+"" Just the minimal VIM setup I needed.
 "" Thanks:
+""   Mislav Marohnić  <mislav.marohnic@gmail.com>
 ""   Gary Bernhardt  <destroyallsoftware.com>
 ""   Drew Neil  <vimcasts.org>
 ""   Tim Pope  <tbaggery.com>
@@ -14,7 +16,6 @@ call pathogen#infect()
 filetype plugin indent on
 
 color molokai
-set nonumber
 set ruler       " show the cursor position all the time
 set cursorline
 set showcmd     " display incomplete commands
