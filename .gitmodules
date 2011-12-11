@@ -37,3 +37,6 @@
 [submodule "bundle/molokai"]
 	path = bundle/molokai
 	url = https://github.com/mrtazz/molokai.vim
+[submodule "bundle/markdown-preview"]
+  path = bundle/markdown-preview
+  url = https://github.com/yarinb/vim-markdown-preview.git
