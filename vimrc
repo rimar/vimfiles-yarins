@@ -15,14 +15,39 @@ set encoding=utf-8
 filetype plugin indent on
 
 set rtp+=~/.vim/bundle/vundle/
- call vundle#rc()
+call vundle#rc()
 
- " let Vundle manage Vundle
- " required! 
- Bundle 'gmarik/vundle'
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
 
- " My Bundles here:
- Bundle 'molokai'
+" My Bundles here:
+"
+" Color schemes
+Bundle 'mrtazz/molokai.vim'
+
+" Ruby
+Bundle "tpope/vim-rails"
+Bundle "vim-ruby/vim-ruby"
+
+" Make VIM easier
+Bundle "mileszs/ack.vim"
+Bundle "tpope/vim-endwise"
+Bundle "tpope/vim-commentary"
+Bundle "delimitMate.vim"
+
+" Command-T
+Bundle "git://git.wincent.com/command-t.git"
+let g:CommandTMatchWindowAtTop=1 " show window at top
+
+" Javascript
+Bundle "tpope/vim-fugitive"
+
+" Git
+Bundle "pangloss/vim-javascript"
+
+" Markdown
+Bundle "tpope/vim-markdown"
 
 color molokai
 
