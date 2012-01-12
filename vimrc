@@ -12,10 +12,20 @@ set nocompatible
 syntax enable
 set encoding=utf-8
 
-call pathogen#infect()
 filetype plugin indent on
 
+set rtp+=~/.vim/bundle/vundle/
+ call vundle#rc()
+
+ " let Vundle manage Vundle
+ " required! 
+ Bundle 'gmarik/vundle'
+
+ " My Bundles here:
+ Bundle 'molokai'
+
 color molokai
+
 set ruler       " show the cursor position all the time
 set cursorline
 set showcmd     " display incomplete commands
@@ -84,6 +94,13 @@ map Q gq
 " Insert the current directory into a command
 cmap <C-P> <C-R>=expand("%:p:h") . "/"
 
+" remap space to :
+nnoremap <Space> :
+
+" exit with 'jj'
+imap jj <Esc>
+
+" map leader to ,
 let mapleader=","
 
 map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
@@ -127,15 +144,17 @@ set directory=~/.vim/_temp      " where to put swap files.
 if has("statusline") && !&cp
   set laststatus=2  " always show the status bar
 
-  " Start the status line
-  set statusline=%f\ %m\ %r
+   " Start the status line
+  "set statusline=%f\ %m\ %r
 
   " Add fugitive
-  set statusline+=%{fugitive#statusline()}
+  "set statusline+=%{fugitive#statusline()}
 
   " Finish the statusline
-  set statusline+=Line:%l/%L[%p%%]
-  set statusline+=Col:%v
-  set statusline+=Buf:#%n
-  set statusline+=[%b][0x%B]
-endif
+  "set statusline+=Line:%l/%L[%p%%]
+  "set statusline+=Col:%v
+  "set statusline+=Buf:#%n
+  "set statusline+=[%b][0x%B]
+ endif
+
+:nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
