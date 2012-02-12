@@ -11,18 +11,21 @@
 set nocompatible
 syntax enable
 set encoding=utf-8
-
 filetype plugin indent on
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
 "
+
+" Nerdtre
+Bundle 'scrooloose/nerdtree'
+
 " Color schemes
 Bundle 'mrtazz/molokai.vim'
 
@@ -35,15 +38,18 @@ Bundle "mileszs/ack.vim"
 Bundle "tpope/vim-endwise"
 Bundle "tpope/vim-commentary"
 Bundle "delimitMate.vim"
+Bundle "Lokaltog/vim-powerline"
 
 " Command-T
-Bundle "git://git.wincent.com/command-t.git"
-let g:CommandTMatchWindowAtTop=1 " show window at top
+" Bundle "git://git.wincent.com/command-t.git"
 
-" Javascript
-Bundle "tpope/vim-fugitive"
+" ctrlp
+Bundle "kien/ctrlp.vim"
 
 " Git
+Bundle "tpope/vim-fugitive"
+
+" Javascript
 Bundle "pangloss/vim-javascript"
 
 " Markdown
@@ -55,7 +61,10 @@ set ruler       " show the cursor position all the time
 set cursorline
 set showcmd     " display incomplete commands
 set number
-set numberwidth=4
+set numberwidth=6
+
+set wildmode=longest,list,full
+set wildmenu
 
 " Allow backgrounding buffers without writing them, and remember marks/undo
 " for backgrounded buffers
@@ -128,17 +137,9 @@ imap jj <Esc>
 " map leader to ,
 let mapleader=","
 
-map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
-map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
-map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
-map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
-map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
-map <leader>gf :CommandTFlush<cr>\|:CommandT features<cr>
 map <leader>gg :topleft 100 :split Gemfile<cr>
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 " http://vimcasts.org/e/14
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
-map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
 nnoremap <leader><leader> <c-^>
 
@@ -168,6 +169,7 @@ set directory=~/.vim/_temp      " where to put swap files.
 
 if has("statusline") && !&cp
   set laststatus=2  " always show the status bar
+  let g:Powerline_symbols = 'fancy'
 
    " Start the status line
   "set statusline=%f\ %m\ %r
@@ -182,4 +184,10 @@ if has("statusline") && !&cp
   "set statusline+=[%b][0x%B]
  endif
 
-:nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
+nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
+
+nnoremap <F8> :set invpaste paste?<CR>
+set pastetoggle=<F8>
+
+nnoremap <F7> :set invnumber number?<CR>
+

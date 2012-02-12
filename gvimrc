@@ -1,5 +1,5 @@
-color vwilight
-set guifont=Menlo\ Regular:h14
+color molokai
+set guifont=Menlo\ for\ Powerline:h12
 set linespace=2
 set antialias
 
