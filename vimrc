@@ -55,6 +55,9 @@ Bundle "pangloss/vim-javascript"
 " Markdown
 Bundle "tpope/vim-markdown"
 
+" CTags
+Bundle "taglist.vim"
+
 color molokai
 
 set ruler       " show the cursor position all the time
