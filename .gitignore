@@ -2,3 +2,5 @@
 /_backup
 /doc/tags
 *.swp
+.netrwhist
+bundle
