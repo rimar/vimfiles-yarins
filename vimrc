@@ -151,7 +151,7 @@ nmap <silent> <leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
 command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
 
-nnoremap <c-j> <c-w>j
+nnoremap <C-Down> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
@@ -161,18 +161,12 @@ imap <C-a> <C-o>I
 
 imap <c-c> <esc>
 
-" disable cursor keys in normal mode
-map <Left>  :echo "no!"<cr>
-map <Right> :echo "no!"<cr>
-map <Up>    :echo "no!"<cr>
-map <Down>  :echo "no!"<cr>
-
 set backupdir=~/.vim/_backup    " where to put backup files.
 set directory=~/.vim/_temp      " where to put swap files.
 
 if has("statusline") && !&cp
   set laststatus=2  " always show the status bar
-  let g:Powerline_symbols = 'fancy'
+  "let g:Powerline_symbols = 'fancy'
 
    " Start the status line
   "set statusline=%f\ %m\ %r
@@ -188,7 +182,6 @@ if has("statusline") && !&cp
  endif
 
 nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
-
 nnoremap <F8> :set invpaste paste?<CR>
 set pastetoggle=<F8>
 

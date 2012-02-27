@@ -1,5 +1,5 @@
 color molokai
-set guifont=Menlo\ for\ Powerline:h12
+set guifont=AurulentSansMono-Regular:h16
 set linespace=2
 set antialias
 
