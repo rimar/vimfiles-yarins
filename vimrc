@@ -22,7 +22,6 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here:
 "
-
 " Nerdtre
 Bundle 'scrooloose/nerdtree'
 
@@ -37,6 +36,7 @@ Bundle "vim-ruby/vim-ruby"
 Bundle "mileszs/ack.vim"
 Bundle "tpope/vim-endwise"
 Bundle "tpope/vim-commentary"
+Bundle "tpope/vim-surround"
 Bundle "delimitMate.vim"
 Bundle "Lokaltog/vim-powerline"
 
@@ -152,9 +152,9 @@ nmap <silent> <leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
 
 nnoremap <C-Down> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+nnoremap <c-Up> <c-w>k
+nnoremap <c-Left> <c-w>h
+nnoremap <c-Right> <c-w>l
 
 imap <C-e> <C-o>A
 imap <C-a> <C-o>I
@@ -186,4 +186,7 @@ nnoremap <F8> :set invpaste paste?<CR>
 set pastetoggle=<F8>
 
 nnoremap <F7> :set invnumber number?<CR>
+
+" No scrollbar
+set guioptions-=r
 
