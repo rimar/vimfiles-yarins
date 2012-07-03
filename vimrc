@@ -58,6 +58,9 @@ Bundle "tpope/vim-markdown"
 " CTags
 Bundle "taglist.vim"
 
+" Coffee Script
+Bundle "kchmck/vim-coffee-script"
+
 color molokai
 
 set ruler       " show the cursor position all the time
@@ -109,6 +112,8 @@ if has("autocmd")
 
   " Treat JSON files like JavaScript
   au BufNewFile,BufRead *.json set ft=javascript
+
+  au BufNewFile,BufRead *.coffee set filetype=coffee
 
   " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
   au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
